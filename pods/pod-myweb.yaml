@@ -1,0 +1,15 @@
+apiVersion : v1
+kind : Pod
+metadata:
+  name: my-web-01
+  labels:
+    env: prod
+    app: main
+    tire: frontend
+    owner: SerhiiSkliarov
+spec:
+  containers:
+    - name: container-apache
+      image: nginx:latest
+      ports:
+        - containerPort: 80

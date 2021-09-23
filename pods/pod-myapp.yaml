@@ -1,0 +1,20 @@
+apiVersion : v1
+kind : Pod
+metadata:
+  name: my-app-01
+  labels:
+    env: prod
+    app: main
+    tire: frontend
+    owner: SerhiiSkliarov
+spec:
+  containers:
+    - name: container-web
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+
+    - name: container-api
+      image: tomcat:8.5.38
+      ports:
+        - containerPort: 8080
